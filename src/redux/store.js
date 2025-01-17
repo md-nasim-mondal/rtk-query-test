@@ -5,10 +5,10 @@ const store = configureStore({
     reducer: {
         // API related with RTK Query
         [baseApi.reducerPath]: baseApi.reducer,
-        middleware: (getDefaultMiddleware) =>
-          getDefaultMiddleware().concat(baseApi.middleware),
         
-    }
+    },
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(baseApi.middleware),
 })
 
 export default store;
